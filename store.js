@@ -10,7 +10,6 @@ const createStore = (reducer) => {
   };
 
   const subscribe = (listener) => {
-    //adds the subscribe functionality
     listeners.push(listener); //pushes each listener that into an array of listeners. (subscribing them)
     return () => {
       listeners = listeners.filter((l) => l !== listener); //This can be used to unsubscribe listeners, removing them from the listeners array
